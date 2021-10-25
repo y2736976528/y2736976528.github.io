@@ -1,0 +1,172 @@
+/* 计算 calc(100vh - 10vh) */
+
+:root {
+    --h: 100px;
+}
+
+.head {
+    height: var(--h);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* 头部 */
+
+header {
+    width: 100%;
+    height: 30vh;
+    background: #2e7bcf url('../images/header-bg.png') 0 0 repeat-x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    width: 70%;
+    height: 20vh;
+}
+
+.head h1 {
+    font-size: 3vw;
+    font-weight: 500;
+    color: white;
+}
+
+.title {
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title>.right {
+    width: 13vw;
+    height: 13vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title>.right>.img {
+    width: 3vw;
+    height: 7vh;
+    background: white;
+    margin-left: 1vw;
+}
+
+.title>.right .top {
+    font-size: 0.5vw;
+    color: white;
+}
+
+.title>.right .bottom {
+    font-size: 1.2vw;
+    color: white;
+}
+
+.head>.bottom {
+    font-size: 19px;
+    color: white;
+}
+
+
+/* 底部 */
+
+main {
+    width: 70%;
+    height: 65vh;
+    padding-top: 2vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+main>.left {
+    width: 79%;
+    height: 100%;
+}
+
+.main-title {
+    padding: 0 !important;
+}
+
+main>.left h1 {
+    padding-top: 6vh;
+}
+
+main>.right {
+    width: 21%;
+    height: 100%;
+    padding-left: 20px;
+}
+
+main>.right div {
+    width: 13vw;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    background: cornflowerblue;
+    margin: 0 0 2vw 2vw;
+    border-radius: 1vw;
+    color: white;
+}
+
+.content {
+    width: 93%;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: vertical;
+    padding: 2vh 0;
+    text-indent: 1.5vw;
+}
+
+.showall{
+    color:blue;
+    font-size: 15px;
+    cursor:pointer;
+    display: none;
+}
+
+.hide{
+    color:blue;
+    font-size: 15px;
+    cursor:pointer;
+    display: none;
+}
+
+// .tow {
+//     position: relative;
+//     left: -992px;
+// }
+
+// .thrre {
+//     position: relative;
+//     left: -992px;
+// }
+
+// .change {
+//     animation: move 0.5s alternate both;
+// }
+
+// @keyframes move {
+//     0% {
+//         left: -992px;
+//     }
+//     100% {
+//         left: 0;
+//     }
+// }
