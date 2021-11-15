@@ -33,3 +33,10 @@ webpack.compile()
 
 // 将./src/index/index.js中的代码打包到/docs/index/文件夹中，
 //文件名称叫index.asdjfklasdfas.js
+
+
+
+var oSpan = document.getElementsByClassName('circle-span')[0];
+oSpan.onclick = function() {
+    window.location.href = 'home.html'
+}
