@@ -42,7 +42,7 @@ export default class Ani {
             return
         }
         let item = this.getTarget(newtargets);
-        item.el.classList.add(item.animationClassName)
+        item.el.classList.add(item.animationClassName);
         const handleEventlister = function(e) {
             if (_this.count != 1) {
                 item.el.classList.remove(item.animationClassName);

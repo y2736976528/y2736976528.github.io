@@ -19,22 +19,35 @@ content.remove();
 
 
 function HTMLparse(str) {
-    let div = document.createElement('div')
-    div.innerHTML = str
-    return div
+    let div = document.createElement('div');
+    div.innerHTML = str;
+    return div;
 }
 
 
-articles.forEach(element => {
+for (let i = 0; i < 2; i++) {
     let newContent = content.cloneNode(true);
-    let div = HTMLparse(element.article);
-    let text = newContent.querySelector('.content_text')
-    div.querySelector('.art-title').setAttribute('data-id', element.id)
+    console.log(newContent)
+    let div = HTMLparse(articles[i].article);
+    let text = newContent.querySelector('.content_text');
+    div.querySelector('.art-title').setAttribute('data-id', articles[i].id);
     newContent.insertBefore(div.querySelector('.art-title'), text);
     text.insertBefore(div.querySelector('.art-content'), newContent.querySelector('.view'));
     text.querySelector('.art-content').innerHTML = text.querySelector('.art-content').innerHTML.ellipsis(80, '...');
     mainContent.appendChild(newContent);
-});
+}
+
+
+// articles.forEach(element => {
+//     let newContent = content.cloneNode(true);
+//     let div = HTMLparse(element.article);
+//     let text = newContent.querySelector('.content_text')
+//     div.querySelector('.art-title').setAttribute('data-id', element.id)
+//     newContent.insertBefore(div.querySelector('.art-title'), text);
+//     text.insertBefore(div.querySelector('.art-content'), newContent.querySelector('.view'));
+//     text.querySelector('.art-content').innerHTML = text.querySelector('.art-content').innerHTML.ellipsis(80, '...');
+//     mainContent.appendChild(newContent);
+// });
 
 
 let view = document.querySelectorAll('.view');
@@ -58,7 +71,25 @@ collect.forEach((collect, index) => {
 //作业五：  
 let animate = Animate.create().use(Translate).mount(document.querySelectorAll('.content_one'));
 
-
+// 添加两条
+let next = document.querySelector('.btn');
+next.remove();
+let cloneNode = next.cloneNode(true);
+mainContent.appendChild(cloneNode);
+document.querySelector('.btn').onclick = function() {
+    let contentLength = document.querySelectorAll('.content_one').length;
+    for (let i = contentLength; i < contentLength + 1; i++) {
+        let newContent = content.cloneNode(true);
+        let div = HTMLparse(articles[i].article);
+        let text = newContent.querySelector('.content_text');
+        div.querySelector('.art-title').setAttribute('data-id', articles[i].id);
+        newContent.insertBefore(div.querySelector('.art-title'), text);
+        text.insertBefore(div.querySelector('.art-content'), newContent.querySelector('.view'));
+        text.querySelector('.art-content').innerHTML = text.querySelector('.art-content').innerHTML.ellipsis(80, '...');
+        mainContent.insertBefore(newContent, document.querySelector('.btn'));
+    }
+    Animate.create().use(Translate).mount(document.querySelectorAll('.content_one'));
+}
 
 let ellipsis = new Ellipsis({
     el: document.querySelector('.art-content'),
