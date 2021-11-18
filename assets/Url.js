@@ -6,7 +6,6 @@ export default class Url {
         this.exec();
     }
 
-
     exec() {
             if (Array.prototype.toString.call(this.props).slice(8, -1) == 'String') {
                 this.urlSplit(this.props);

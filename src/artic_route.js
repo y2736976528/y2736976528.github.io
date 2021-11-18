@@ -13,7 +13,7 @@ function HTMLparse(str) {
 
 export default [{
         id: 1,
-        title: '如何看待知乎上的男拳1',
+        title: '如何看待知乎上的男拳2',
         article: HTMLparse(article1)
     },
     {
@@ -23,22 +23,22 @@ export default [{
     },
     {
         id: 3,
-        title: '如何看待知乎上的男拳3',
+        title: '如何看待知乎上的男拳2',
         article: HTMLparse(article3)
     },
     {
         id: 4,
-        title: '如何看待知乎上的男拳4',
+        title: '如何看待知乎上的男拳2',
         article: HTMLparse(article4)
     },
     {
         id: 5,
-        title: '如何看待知乎上的男拳5',
+        title: '如何看待知乎上的男拳2',
         article: HTMLparse(article5)
     },
     {
         id: 6,
-        title: '如何看待知乎上的男拳5',
+        title: '如何看待知乎上的男拳2',
         article: HTMLparse(article6)
     },
 ]

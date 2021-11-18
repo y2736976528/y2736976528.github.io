@@ -6,7 +6,7 @@ body {
   min-width: 1400px;
 }
 #warp #header {
-  background-color: #1890ff;
+  background-color: #72607d;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -32,15 +32,21 @@ body {
   justify-content: center;
 }
 #warp #main .main-body {
-  width: 62%;
+  width: 59%;
   display: flex;
 }
 #warp #main .main-body .main_content {
-  width: 70%;
+  width: 90%;
   border-right: 1px solid #ffadd2;
 }
-#warp #main .main-body .main_content .content_text {
-  padding: 10px 0 0 24px;
+#warp #main .main-body .main_content .btn {
+  cursor: pointer;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
 }
 #warp #main .main-body .main_content .content_text .view {
   margin-left: 10px;
@@ -59,29 +65,28 @@ body {
 #warp #main .main-body .main_content .content_one {
   position: relative;
   left: -900px;
-  font-size: 24px;
-  padding: 10px 10px 10px;
+  margin-top: 10px;
+}
+#warp #main .main-body .main_content .content_one .art-title {
+  margin: 0px;
+  font-size: 25px;
+  padding: 10px 10px 10px 0;
 }
 #warp #main .main-body .main_list {
-  width: 30%;
-  padding: 20px;
+  width: 10%;
   font-size: 20px;
   color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #warp #main .main-body .main_list .nav {
-  width: 50%;
+  width: 90%;
   height: 35px;
   display: flex;
   justify-content: center;
   line-height: 35px;
-  padding: 5px 10px;
   border-radius: 6px;
-  margin: 6px 0;
-  background-color: #91d5ff;
+  background-color: #72607d;
   color: #ffffff;
+  margin: 15px;
 }
 #warp #main .content {
   animation: leftFly 1s;
